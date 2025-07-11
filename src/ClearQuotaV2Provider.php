@@ -29,7 +29,7 @@ class ClearQuotaV2Provider implements ClearQuotaV2ProviderInterface
     public function clearQuota(ApplicationInterface $application): void
     {$request = $this->getRequest($application);
         $response = $this->client->sendRequest($request);
-        $data = json_encode($response->getBody()->getContents(),true);
+        $data = json_decode($response->getBody()->getContents(),true);
         if($data['errcode'] != 0)
         {
             throw $this->exceptionFactory->createException($data['errcode'],$data['errmsg']);
