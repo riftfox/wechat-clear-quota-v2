@@ -1,0 +1,29 @@
+{
+    "name": "riftfox/wechat-clear-quota-v2",
+    "description": "微信公众平台使用AppSecret重置API调用次数",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Riftfox\\Wechat\\ClearQuota\\V2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Riftfox",
+            "email": "riftfox@riftfox.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "psr/http-factory": "@stable",
+        "psr/http-message": "@stable",
+        "psr/http-client": "@stable",
+        "riftfox/wechat-application": "@stable",
+        "riftfox/wechat-exception": "@stable"
+    },
+    "require-dev": {
+        "guzzlehttp/psr7": "@dev",
+        "guzzle/http": "@dev"
+    }
+}
